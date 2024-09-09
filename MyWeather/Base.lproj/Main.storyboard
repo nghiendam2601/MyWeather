@@ -151,7 +151,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="2ay-aD-RdD"/>
                     <connections>
+                        <outlet property="CityName" destination="FQc-V6-Lcu" id="WZH-pE-3b1"/>
                         <outlet property="ColorModeButton" destination="cpZ-UB-eQi" id="wKA-wb-3h2"/>
+                        <outlet property="Image" destination="oWo-Uo-Ooj" id="vXe-zF-LHj"/>
+                        <outlet property="Temp" destination="rat-v8-gKG" id="C44-2E-sbI"/>
+                        <outlet property="text" destination="haW-j5-xn2" id="JSd-E4-9fC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbS-Gj-xH8" sceneMemberID="firstResponder"/>

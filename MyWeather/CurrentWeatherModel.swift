@@ -6,21 +6,21 @@
 //
 import Foundation
 
-struct CurrentWeatherModel {
+struct CurrentWeatherModel: Codable {
     var location: Location
     var current: Current
 }
 
-struct Location {
+struct Location: Codable {
     var name: String
 }
 
-struct Current {
+struct Current: Codable {
     var tempC: Double
     var condition: Condition
 }
 
-struct Condition {
+struct Condition: Codable {
     var text: String
     var icon: String
 }
