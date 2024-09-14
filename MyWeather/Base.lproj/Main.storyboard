@@ -108,13 +108,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="naz-RH-WUZ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="naz-RH-WUZ">
                                 <rect key="frame" x="10" y="294" width="373" height="140"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="RhQ-xN-hOY"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="weH-wA-idE">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MQh-Rs-Z5B">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -122,28 +122,20 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-43-Irq">
-                                <rect key="frame" x="10" y="454" width="373" height="344"/>
-                                <color key="backgroundColor" systemColor="systemFillColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GxL-D6-GXH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LJI-xo-59K" firstAttribute="top" secondItem="GxL-D6-GXH" secondAttribute="top" id="3QJ-wL-ILq"/>
-                            <constraint firstItem="lJz-43-Irq" firstAttribute="leading" secondItem="GxL-D6-GXH" secondAttribute="leading" constant="10" id="5wY-Xy-SFO"/>
                             <constraint firstItem="z6k-ua-rZj" firstAttribute="top" secondItem="LJI-xo-59K" secondAttribute="bottom" constant="25" id="77J-on-P3D"/>
                             <constraint firstAttribute="bottom" secondItem="arq-dI-GEm" secondAttribute="bottom" id="E1X-ia-oMa"/>
                             <constraint firstItem="arq-dI-GEm" firstAttribute="trailing" secondItem="GxL-D6-GXH" secondAttribute="trailing" id="EIL-KZ-ZGq"/>
                             <constraint firstItem="naz-RH-WUZ" firstAttribute="leading" secondItem="GxL-D6-GXH" secondAttribute="leading" constant="10" id="FpH-fs-w8q"/>
                             <constraint firstItem="GxL-D6-GXH" firstAttribute="trailing" secondItem="z6k-ua-rZj" secondAttribute="trailing" constant="20" id="FrB-Ho-hdu"/>
                             <constraint firstItem="GxL-D6-GXH" firstAttribute="trailing" secondItem="naz-RH-WUZ" secondAttribute="trailing" constant="10" id="JZn-LC-Lfa"/>
-                            <constraint firstItem="GxL-D6-GXH" firstAttribute="trailing" secondItem="lJz-43-Irq" secondAttribute="trailing" constant="10" id="Owf-yp-hFq"/>
                             <constraint firstItem="naz-RH-WUZ" firstAttribute="top" secondItem="z6k-ua-rZj" secondAttribute="bottom" constant="20" id="ZUj-iv-yLr"/>
                             <constraint firstItem="arq-dI-GEm" firstAttribute="leading" secondItem="GxL-D6-GXH" secondAttribute="leading" id="aZx-cd-0xl"/>
                             <constraint firstItem="LJI-xo-59K" firstAttribute="leading" secondItem="GxL-D6-GXH" secondAttribute="leading" constant="10" id="cgp-6U-LAT"/>
-                            <constraint firstItem="GxL-D6-GXH" firstAttribute="bottom" secondItem="lJz-43-Irq" secondAttribute="bottom" constant="20" id="coB-E5-GCd"/>
-                            <constraint firstItem="lJz-43-Irq" firstAttribute="top" secondItem="naz-RH-WUZ" secondAttribute="bottom" constant="20" id="fz6-ah-qPw"/>
                             <constraint firstItem="arq-dI-GEm" firstAttribute="top" secondItem="LJe-zW-lik" secondAttribute="top" id="hv5-bK-AkL"/>
                             <constraint firstItem="GxL-D6-GXH" firstAttribute="trailing" secondItem="LJI-xo-59K" secondAttribute="trailing" constant="10" id="zKT-Ad-hWK"/>
                             <constraint firstItem="z6k-ua-rZj" firstAttribute="leading" secondItem="GxL-D6-GXH" secondAttribute="leading" constant="20" id="zMf-V6-F3b"/>
@@ -155,6 +147,7 @@
                         <outlet property="ColorModeButton" destination="cpZ-UB-eQi" id="wKA-wb-3h2"/>
                         <outlet property="Image" destination="oWo-Uo-Ooj" id="vXe-zF-LHj"/>
                         <outlet property="Temp" destination="rat-v8-gKG" id="C44-2E-sbI"/>
+                        <outlet property="collectionView" destination="naz-RH-WUZ" id="7mJ-S2-SRm"/>
                         <outlet property="text" destination="haW-j5-xn2" id="JSd-E4-9fC"/>
                     </connections>
                 </viewController>
@@ -176,7 +169,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

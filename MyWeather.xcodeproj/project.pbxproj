@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		120D99612C8EA22E006FD2CA /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */; };
+		120D99612C8EA22E006FD2CA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99602C8EA22E006FD2CA /* WeatherModel.swift */; };
 		120D99632C8EA665006FD2CA /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99622C8EA665006FD2CA /* WeatherManager.swift */; };
 		120D99652C8EAE29006FD2CA /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99642C8EAE29006FD2CA /* Enum.swift */; };
 		120D996D2C8EC4CD006FD2CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 120D996C2C8EC4CD006FD2CA /* Kingfisher */; };
+		12BFCEAD2C90536100B5DCC0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12BFCEAC2C90536100B5DCC0 /* IQKeyboardManagerSwift */; };
+		12BFCEB02C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12BFCEAF2C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib */; };
+		12BFCEB12C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFCEAE2C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift */; };
+		12BFCEC72C907CD900B5DCC0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFCEC62C907CD900B5DCC0 /* Protocols.swift */; };
 		12F89E452C79FB1E0039C101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F89E442C79FB1E0039C101 /* AppDelegate.swift */; };
 		12F89E472C79FB1E0039C101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F89E462C79FB1E0039C101 /* SceneDelegate.swift */; };
 		12F89E492C79FB1E0039C101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F89E482C79FB1E0039C101 /* ViewController.swift */; };
@@ -20,9 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		120D99602C8EA22E006FD2CA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		120D99622C8EA665006FD2CA /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		120D99642C8EAE29006FD2CA /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		12BFCEAE2C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		12BFCEAF2C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourForecastCollectionViewCell.xib; sourceTree = "<group>"; };
+		12BFCEC62C907CD900B5DCC0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		12F89E412C79FB1E0039C101 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F89E442C79FB1E0039C101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F89E462C79FB1E0039C101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +46,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				120D996D2C8EC4CD006FD2CA /* Kingfisher in Frameworks */,
+				12BFCEAD2C90536100B5DCC0 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12BFCEB72C90546100B5DCC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				120D99602C8EA22E006FD2CA /* WeatherModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		12BFCEB92C9054B600B5DCC0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				120D99622C8EA665006FD2CA /* WeatherManager.swift */,
+				120D99642C8EAE29006FD2CA /* Enum.swift */,
+				12BFCEC62C907CD900B5DCC0 /* Protocols.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		12BFCEBA2C9054F600B5DCC0 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				12F89E462C79FB1E0039C101 /* SceneDelegate.swift */,
+				12F89E442C79FB1E0039C101 /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		12BFCEBB2C90551800B5DCC0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				12F89E482C79FB1E0039C101 /* ViewController.swift */,
+				12F89E4A2C79FB1E0039C101 /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		12BFCEBC2C90553800B5DCC0 /* HourForecast */ = {
+			isa = PBXGroup;
+			children = (
+				12BFCEAE2C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift */,
+				12BFCEAF2C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib */,
+			);
+			path = HourForecast;
+			sourceTree = "<group>";
+		};
 		12F89E382C79FB1E0039C101 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +117,11 @@
 		12F89E432C79FB1E0039C101 /* MyWeather */ = {
 			isa = PBXGroup;
 			children = (
-				12F89E442C79FB1E0039C101 /* AppDelegate.swift */,
-				12F89E462C79FB1E0039C101 /* SceneDelegate.swift */,
-				12F89E482C79FB1E0039C101 /* ViewController.swift */,
-				12F89E4A2C79FB1E0039C101 /* Main.storyboard */,
-				120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */,
-				120D99642C8EAE29006FD2CA /* Enum.swift */,
-				120D99622C8EA665006FD2CA /* WeatherManager.swift */,
+				12BFCEBA2C9054F600B5DCC0 /* Delegate */,
+				12BFCEBC2C90553800B5DCC0 /* HourForecast */,
+				12BFCEBB2C90551800B5DCC0 /* Main */,
+				12BFCEB72C90546100B5DCC0 /* Models */,
+				12BFCEB92C9054B600B5DCC0 /* Networking */,
 				12F89E4D2C79FB200039C101 /* Assets.xcassets */,
 				12F89E4F2C79FB200039C101 /* LaunchScreen.storyboard */,
 				12F89E522C79FB200039C101 /* Info.plist */,
@@ -96,6 +147,7 @@
 			name = MyWeather;
 			packageProductDependencies = (
 				120D996C2C8EC4CD006FD2CA /* Kingfisher */,
+				12BFCEAC2C90536100B5DCC0 /* IQKeyboardManagerSwift */,
 			);
 			productName = MyWeather;
 			productReference = 12F89E412C79FB1E0039C101 /* MyWeather.app */;
@@ -127,6 +179,7 @@
 			mainGroup = 12F89E382C79FB1E0039C101;
 			packageReferences = (
 				120D996B2C8EC4CD006FD2CA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				12BFCEAB2C90536100B5DCC0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 12F89E422C79FB1E0039C101 /* Products */;
 			projectDirPath = "";
@@ -144,6 +197,7 @@
 			files = (
 				12F89E4E2C79FB200039C101 /* Assets.xcassets in Resources */,
 				12F89E512C79FB200039C101 /* Base in Resources */,
+				12BFCEB02C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib in Resources */,
 				12F89E4C2C79FB1E0039C101 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,11 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BFCEB12C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift in Sources */,
 				12F89E492C79FB1E0039C101 /* ViewController.swift in Sources */,
+				12BFCEC72C907CD900B5DCC0 /* Protocols.swift in Sources */,
 				12F89E452C79FB1E0039C101 /* AppDelegate.swift in Sources */,
 				120D99652C8EAE29006FD2CA /* Enum.swift in Sources */,
 				120D99632C8EA665006FD2CA /* WeatherManager.swift in Sources */,
-				120D99612C8EA22E006FD2CA /* CurrentWeatherModel.swift in Sources */,
+				120D99612C8EA22E006FD2CA /* WeatherModel.swift in Sources */,
 				12F89E472C79FB1E0039C101 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +451,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		12BFCEAB2C90536100B5DCC0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -402,6 +466,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 120D996B2C8EC4CD006FD2CA /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		12BFCEAC2C90536100B5DCC0 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12BFCEAB2C90536100B5DCC0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

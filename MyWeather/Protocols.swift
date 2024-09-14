@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol weatherDelegate{
+    func updateWeatherData(WeatherData: CurrentWeatherModel)
+//    func updateUICurrent(text: String,temp:Double,name:String,image:String)
+}

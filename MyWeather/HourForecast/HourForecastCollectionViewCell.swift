@@ -7,17 +7,13 @@
 
 import UIKit
 
-class HourForecastTableViewCell: UITableViewCell {
+class HourForecastCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var temp: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var hour: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
