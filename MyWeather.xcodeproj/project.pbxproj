@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		120D99612C8EA22E006FD2CA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99602C8EA22E006FD2CA /* WeatherModel.swift */; };
+		120D99612C8EA22E006FD2CA /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */; };
 		120D99632C8EA665006FD2CA /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99622C8EA665006FD2CA /* WeatherManager.swift */; };
 		120D99652C8EAE29006FD2CA /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120D99642C8EAE29006FD2CA /* Enum.swift */; };
 		120D996D2C8EC4CD006FD2CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 120D996C2C8EC4CD006FD2CA /* Kingfisher */; };
+		12366AA32C9BC8DF00ABD10F /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12366AA22C9BC8DF00ABD10F /* CoreLocationManager.swift */; };
+		126E92252C95A6A800A86B86 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E92242C95A6A800A86B86 /* NetworkService.swift */; };
+		126E92272C95A71700A86B86 /* ForecastWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126E92262C95A71700A86B86 /* ForecastWeatherModel.swift */; };
 		12BFCEAD2C90536100B5DCC0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 12BFCEAC2C90536100B5DCC0 /* IQKeyboardManagerSwift */; };
 		12BFCEB02C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12BFCEAF2C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib */; };
 		12BFCEB12C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BFCEAE2C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift */; };
@@ -24,9 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		120D99602C8EA22E006FD2CA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
 		120D99622C8EA665006FD2CA /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		120D99642C8EAE29006FD2CA /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		12366AA22C9BC8DF00ABD10F /* CoreLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
+		126E92242C95A6A800A86B86 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		126E92262C95A71700A86B86 /* ForecastWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherModel.swift; sourceTree = "<group>"; };
 		12BFCEAE2C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		12BFCEAF2C90541F00B5DCC0 /* HourForecastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourForecastCollectionViewCell.xib; sourceTree = "<group>"; };
 		12BFCEC62C907CD900B5DCC0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -53,10 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12366A9F2C9BC8A500ABD10F /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				12366AA22C9BC8DF00ABD10F /* CoreLocationManager.swift */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
 		12BFCEB72C90546100B5DCC0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				120D99602C8EA22E006FD2CA /* WeatherModel.swift */,
+				120D99602C8EA22E006FD2CA /* CurrentWeatherModel.swift */,
+				126E92262C95A71700A86B86 /* ForecastWeatherModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -67,6 +82,7 @@
 				120D99622C8EA665006FD2CA /* WeatherManager.swift */,
 				120D99642C8EAE29006FD2CA /* Enum.swift */,
 				12BFCEC62C907CD900B5DCC0 /* Protocols.swift */,
+				126E92242C95A6A800A86B86 /* NetworkService.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 				12BFCEBC2C90553800B5DCC0 /* HourForecast */,
 				12BFCEBB2C90551800B5DCC0 /* Main */,
 				12BFCEB72C90546100B5DCC0 /* Models */,
+				12366A9F2C9BC8A500ABD10F /* CoreLocation */,
 				12BFCEB92C9054B600B5DCC0 /* Networking */,
 				12F89E4D2C79FB200039C101 /* Assets.xcassets */,
 				12F89E4F2C79FB200039C101 /* LaunchScreen.storyboard */,
@@ -210,12 +227,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				12BFCEB12C90541F00B5DCC0 /* HourForecastCollectionViewCell.swift in Sources */,
+				12366AA32C9BC8DF00ABD10F /* CoreLocationManager.swift in Sources */,
 				12F89E492C79FB1E0039C101 /* ViewController.swift in Sources */,
 				12BFCEC72C907CD900B5DCC0 /* Protocols.swift in Sources */,
 				12F89E452C79FB1E0039C101 /* AppDelegate.swift in Sources */,
+				126E92252C95A6A800A86B86 /* NetworkService.swift in Sources */,
+				126E92272C95A71700A86B86 /* ForecastWeatherModel.swift in Sources */,
 				120D99652C8EAE29006FD2CA /* Enum.swift in Sources */,
 				120D99632C8EA665006FD2CA /* WeatherManager.swift in Sources */,
-				120D99612C8EA22E006FD2CA /* WeatherModel.swift in Sources */,
+				120D99612C8EA22E006FD2CA /* CurrentWeatherModel.swift in Sources */,
 				12F89E472C79FB1E0039C101 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -351,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

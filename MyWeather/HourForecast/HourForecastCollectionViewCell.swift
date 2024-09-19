@@ -9,6 +9,7 @@ import UIKit
 
 class HourForecastCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet var dayMonth: UILabel!
     @IBOutlet var temp: UILabel!
     @IBOutlet var image: UIImageView!
     @IBOutlet var hour: UILabel!

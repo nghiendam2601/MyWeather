@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct CurrentWeatherModel: Codable {
+struct CurrentWeatherModel: Decodable {
     var name: String
     var temp: Int   
     var des: String
@@ -47,18 +47,18 @@ struct CurrentWeatherModel: Codable {
     }
 
     // Custom encoding for nested keys
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(name, forKey: .name)
-
-        // Encode the temperature in the "main" container
-        var mainContainer = container.nestedContainer(keyedBy: MainKeys.self, forKey: .main)
-        try mainContainer.encode(Double(temp), forKey: .temp)  // Chuyển lại từ Int sang Double để encode
-
-        // Encode the "weather" array (first element)
-        var weatherArray = container.nestedUnkeyedContainer(forKey: .weather)
-        var weatherContainer = weatherArray.nestedContainer(keyedBy: WeatherKeys.self)
-        try weatherContainer.encode(des, forKey: .des)
-        try weatherContainer.encode(icon, forKey: .icon)
-    }
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//        try container.encode(name, forKey: .name)
+//
+//        // Encode the temperature in the "main" container
+//        var mainContainer = container.nestedContainer(keyedBy: MainKeys.self, forKey: .main)
+//        try mainContainer.encode(Double(temp), forKey: .temp)
+//
+//        // Encode the "weather" array (first element)
+//        var weatherArray = container.nestedUnkeyedContainer(forKey: .weather)
+//        var weatherContainer = weatherArray.nestedContainer(keyedBy: WeatherKeys.self)
+//        try weatherContainer.encode(des, forKey: .des)
+//        try weatherContainer.encode(icon, forKey: .icon)
+//    }
 }

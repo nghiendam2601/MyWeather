@@ -12,4 +12,11 @@ enum WeatherError: Error{
     case DecodingError
     case ResponseError
 }
-
+enum WeatherDataType{
+    case current
+    case forecast
+}
+enum SearchType{
+    case city
+    case cooodinate
+}

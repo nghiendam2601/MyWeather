@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IDa-Lk-Rxn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IDa-Lk-Rxn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="10" y="59" width="373" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-UB-eQi">
-                                        <rect key="frame" x="0.0" y="1" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.66666666666666785" width="40" height="38.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="2LO-eZ-7Jk"/>
                                             <constraint firstAttribute="height" constant="40" id="Klp-zB-D7c"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLd-AO-94N">
-                                        <rect key="frame" x="50" y="1" width="40" height="38.666666666666671"/>
+                                        <rect key="frame" x="50" y="0.66666666666666785" width="40" height="38.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Hj2-QD-v91"/>
                                             <constraint firstAttribute="height" constant="40" id="c1Y-3c-Avc"/>
@@ -48,6 +48,9 @@
                                         <color key="tintColor" name="myWeatherColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="currentLocationClick:" destination="IDa-Lk-Rxn" eventType="touchUpInside" id="R5E-kk-cDU"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C82-bt-idO">
                                         <rect key="frame" x="100" y="0.0" width="223" height="40"/>
@@ -64,6 +67,9 @@
                                         <color key="tintColor" name="myWeatherColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                        <connections>
+                                            <action selector="buttonSearch:" destination="IDa-Lk-Rxn" eventType="touchUpInside" id="fwb-Ex-0oG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,7 +86,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="wxf-GQ-NAW" userLabel="Stack View 2">
                                         <rect key="frame" x="128" y="0.0" width="225" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hanoi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-V6-Lcu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQc-V6-Lcu">
                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="jvF-vs-NlF"/>
@@ -89,7 +95,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rat-v8-gKG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rat-v8-gKG">
                                                 <rect key="frame" x="0.0" y="53" width="225" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gcd-PB-SRJ"/>
@@ -98,7 +104,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haW-j5-xn2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haW-j5-xn2">
                                                 <rect key="frame" x="0.0" y="126" width="225" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -109,10 +115,10 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="naz-RH-WUZ">
-                                <rect key="frame" x="10" y="294" width="373" height="140"/>
+                                <rect key="frame" x="10" y="294" width="373" height="160"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="RhQ-xN-hOY"/>
+                                    <constraint firstAttribute="height" constant="160" id="RhQ-xN-hOY"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MQh-Rs-Z5B">
                                     <size key="itemSize" width="128" height="128"/>
@@ -148,6 +154,7 @@
                         <outlet property="Image" destination="oWo-Uo-Ooj" id="vXe-zF-LHj"/>
                         <outlet property="Temp" destination="rat-v8-gKG" id="C44-2E-sbI"/>
                         <outlet property="collectionView" destination="naz-RH-WUZ" id="7mJ-S2-SRm"/>
+                        <outlet property="searchTextField" destination="C82-bt-idO" id="NDE-XR-NkN"/>
                         <outlet property="text" destination="haW-j5-xn2" id="JSd-E4-9fC"/>
                     </connections>
                 </viewController>
@@ -169,7 +176,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
