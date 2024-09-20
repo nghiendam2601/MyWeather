@@ -1,4 +1,4 @@
-# Weathery App
+# MyWeather
 
 MyWeather is an iOS app designed to provide users with up-to-date weather information.
 
